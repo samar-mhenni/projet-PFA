@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "redcrew"
+version = "0.1.0"
+description = "Evidence-led CrewAI security assessment with local MITRE ATT&CK retrieval"
+requires-python = ">=3.11,<3.14"
+dependencies = ["crewai>=1.15,<2", "chromadb>=1.1,<2", "python-dotenv>=1,<2"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+redcrew = "redcrew.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

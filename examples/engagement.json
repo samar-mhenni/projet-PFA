@@ -1,0 +1,10 @@
+{
+  "name": "Local lab review",
+  "authorized": true,
+  "targets": ["lab.example.test"],
+  "objective": "Assess web and Linux exposure, map evidence to ATT&CK, and prioritize validation and remediation.",
+  "evidence": [
+    {"id": "E001", "target": "lab.example.test", "kind": "inventory", "content": "Training fixture: Ubuntu web server, nginx, SSH restricted to the management subnet. No live observations have been collected."},
+    {"id": "E002", "target": "lab.example.test", "kind": "configuration", "content": "Training fixture: application logging and SSH authentication logs are available; patch level and HTTP security headers are unknown."}
+  ]
+}
